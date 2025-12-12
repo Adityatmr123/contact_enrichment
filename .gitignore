@@ -1,0 +1,65 @@
+# Environment variables
+.env
+.env.local
+config.py  # Contains API keys - override this file locally
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+contact_enrichment.log
+
+# Data
+*.csv
+*.json
+enriched_contacts_*.json
+enriched_contacts_*.csv
+
+# MongoDB
+mongod.lock
+journal/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary
+*.tmp
+*.temp
+.tmp/
