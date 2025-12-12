@@ -94,7 +94,7 @@ class CognismAPI(BaseEnrichmentAPI):
     def __init__(self):
         super().__init__(COGNISM_API_KEY, "https://app.cognism.com/api")
 
-    async def search_employees(self, company_name: str, domain: str, limit: int = 5) -> list[dict]:
+    async def search_employees(self, company_name: str, domain: str, limit: int = 1) -> list[dict]:
         """Search for employees in company using Cognism Search API"""
         try:
             headers = {
@@ -148,10 +148,8 @@ class LushaAPI(BaseEnrichmentAPI):
     def __init__(self):
         super().__init__(LUSHA_API_KEY, "https://api.lusha.com/prospecting")
 
-    async def search_employees(self, company_name: str, domain: str, limit: int = None) -> list[dict]:
+    async def search_employees(self, company_name: str, domain: str, limit: int = 1) -> list[dict]:
         """Search for employees in company using Lusha Prospecting API"""
-        if limit is None:
-            limit = MAX_CONTACTS_PER_COMPANY
 
         try:
             headers = {
@@ -200,7 +198,7 @@ class ApolloAPI(BaseEnrichmentAPI):
     def __init__(self):
         super().__init__(APOLLO_API_KEY, "https://api.apollo.io/api/v1")
 
-    async def search_employees(self, company_name: str, domain: str, limit: int = 5) -> list[dict]:
+    async def search_employees(self, company_name: str, domain: str, limit: int = 1) -> list[dict]:
         """Search for employees in company using Apollo People API Search"""
         try:
             headers = {

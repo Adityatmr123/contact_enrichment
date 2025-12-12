@@ -49,8 +49,8 @@ APOLLO_API_KEY = os.getenv('APOLLO_API_KEY', 'YOUR_APOLLO_API_KEY')
 # ============================================================================
 # Pipeline Configuration
 # ============================================================================
-# Number of people to find per company domain
-PEOPLE_PER_COMPANY = int(os.getenv('PEOPLE_PER_COMPANY', '5'))
+# Number of people to find per company domain (set to 1 for testing to save credits)
+PEOPLE_PER_COMPANY = int(os.getenv('PEOPLE_PER_COMPANY', '1'))
 
 # Enrichment API timeouts (in seconds)
 API_TIMEOUT = int(os.getenv('API_TIMEOUT', '30'))
@@ -94,8 +94,8 @@ SHEET_OUTPUT_COLUMNS = {
 # ============================================================================
 # Contact Search Filters (Based on Lusha API)
 # ============================================================================
-# Max contacts to find per company
-MAX_CONTACTS_PER_COMPANY = int(os.getenv('MAX_CONTACTS_PER_COMPANY', '10'))
+# Max contacts to find per company (set to 1 for testing to save credits)
+MAX_CONTACTS_PER_COMPANY = int(os.getenv('MAX_CONTACTS_PER_COMPANY', '1'))
 
 # ===== LOCATION FILTERS =====
 # Region: France (Germany in the future)
